@@ -24,7 +24,15 @@ export default function App() {
           alt="Company Logo"           
           className="h-16 w-16"         
         />         
-        <p className="font-bold text-white text-xl">ROOF & BEYOND</p>       
+        <p className="font-bold text-white text-xl 
+          transition-all duration-300 
+          hover:text-indigo-400 
+          hover:drop-shadow-[0_0_10px_rgba(99,102,241,0.7)]
+          hover:scale-105 
+          cursor-pointer"
+        >
+          ROOF & BEYOND
+        </p>       
       </NavbarBrand>       
       <NavbarContent         
         className="absolute left-1/2 transform -translate-x-1/2 hidden lg:flex gap-8"       
