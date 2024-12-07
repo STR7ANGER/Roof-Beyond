@@ -15,7 +15,7 @@ export default function AwesomeNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: 'Home', href: '#home' },
+    { label: 'Home', href: '#' },
     { label: 'About', href: '#about' },
     { label: 'Projects', href: '#projects' },
     { label: 'Testimonials', href: '#testimonials' }
