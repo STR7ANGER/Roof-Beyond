@@ -1,5 +1,5 @@
 import React from "react";
-import { Star } from "lucide-react";
+import { Star, ChevronRight } from "lucide-react";
 
 const ProjectCard = ({ image1, image2, title, price, description }) => {
   return (
@@ -40,43 +40,55 @@ const ProjectCard = ({ image1, image2, title, price, description }) => {
 const Projects = () => {
   const projectsData = [
     {
-      image1: "https://t3.ftcdn.net/jpg/06/69/53/10/360_F_669531006_I4JjdgpCLMmPs2nwVP3zhBvPJe7bzfB8.jpg",
-      image2: "https://static.wixstatic.com/media/bf8702_588c45d5a563446f8724133f43c634bc~mv2.webp/v1/fill/w_738,h_511,al_c,q_85,enc_auto/bf8702_588c45d5a563446f8724133f43c634bc~mv2.webp",
+      image1:
+        "https://t3.ftcdn.net/jpg/06/69/53/10/360_F_669531006_I4JjdgpCLMmPs2nwVP3zhBvPJe7bzfB8.jpg",
+      image2:
+        "https://static.wixstatic.com/media/bf8702_588c45d5a563446f8724133f43c634bc~mv2.webp/v1/fill/w_738,h_511,al_c,q_85,enc_auto/bf8702_588c45d5a563446f8724133f43c634bc~mv2.webp",
       title: "Simple Mordern House",
       price: "$1,2000,000.00",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     },
     {
-      image1: "https://img.freepik.com/premium-photo/exterior-luxury-house-with-swimming-pool-modern-villa-generative-aixa_174954-811.jpg",
-      image2: "https://fancyhouse-design.com/wp-content/uploads/2023/11/This-villas-interior-design-combines-clean-lines-and-neutral-tones-for-a-modern-touch..jpg",
+      image1:
+        "https://img.freepik.com/premium-photo/exterior-luxury-house-with-swimming-pool-modern-villa-generative-aixa_174954-811.jpg",
+      image2:
+        "https://fancyhouse-design.com/wp-content/uploads/2023/11/This-villas-interior-design-combines-clean-lines-and-neutral-tones-for-a-modern-touch..jpg",
       title: "East-side Backyard with Pool",
       price: "$3,400.000.00",
       description: "Consectetur adipisicing elit omnis quibusdam ab maiores.",
     },
     {
-      image1: "https://cms.interiorcompany.com/wp-content/uploads/2023/11/simple-house-design-go-for-minimalist.png",
-      image2: "https://3.imimg.com/data3/ON/BL/MY-15636581/commercial-interior-designing-service-500x500.jpg",
+      image1:
+        "https://cms.interiorcompany.com/wp-content/uploads/2023/11/simple-house-design-go-for-minimalist.png",
+      image2:
+        "https://3.imimg.com/data3/ON/BL/MY-15636581/commercial-interior-designing-service-500x500.jpg",
       title: "Minimilist",
       price: "$700,000.00",
       description: "Omnis quibusdam ab maiores placeat odio id?",
     },
     {
-      image1: "https://i.pinimg.com/736x/20/55/b2/2055b204890b01547efda2c1341079e8.jpg",
-      image2: "https://i.pinimg.com/736x/af/bd/02/afbd02e8adf355aa66fb98bd490c2801.jpg",
+      image1:
+        "https://i.pinimg.com/736x/20/55/b2/2055b204890b01547efda2c1341079e8.jpg",
+      image2:
+        "https://i.pinimg.com/736x/af/bd/02/afbd02e8adf355aa66fb98bd490c2801.jpg",
       title: "Dark Theam House",
       price: "$2,750,00.00",
       description: "Placeat odio id consectetur adipisicing elit.",
     },
     {
-      image1: "https://i.pinimg.com/736x/d3/b3/66/d3b366912094c367ff0964ec7219707b.jpg",
-      image2: "https://cdn.decorilla.com/online-decorating/wp-content/uploads/2023/12/Modern-interior-design-ideas-2025-by-Decorilla-1024x574.jpeg?width=900",
+      image1:
+        "https://i.pinimg.com/736x/d3/b3/66/d3b366912094c367ff0964ec7219707b.jpg",
+      image2:
+        "https://cdn.decorilla.com/online-decorating/wp-content/uploads/2023/12/Modern-interior-design-ideas-2025-by-Decorilla-1024x574.jpeg?width=900",
       title: "Villa",
       price: "$7,800,000.00",
       description: "Ab maiores placeat odio id consectetur adipisicing.",
     },
     {
-      image1: "https://ahouseinthehills.com/wp-content/uploads/2013/06/modern_architecture_a_house_in_the_hills004.jpg",
-      image2: "https://as1.ftcdn.net/v2/jpg/05/57/01/22/1000_F_557012275_svUKApkpwQPHWcS6bl7Q2nNwD5dE3VJo.jpg",
+      image1:
+        "https://ahouseinthehills.com/wp-content/uploads/2013/06/modern_architecture_a_house_in_the_hills004.jpg",
+      image2:
+        "https://as1.ftcdn.net/v2/jpg/05/57/01/22/1000_F_557012275_svUKApkpwQPHWcS6bl7Q2nNwD5dE3VJo.jpg",
       title: "Country Side Luxury",
       price: "$4,640,000.00",
       description: "Maiores placeat odio id consectetur adipisicing elit.",
@@ -84,10 +96,11 @@ const Projects = () => {
   ];
 
   return (
-    <div id="projects" className="container mx-auto px-4 py-8">
+    <div id="projects" className="container mx-auto px-4 py-8 relative">
       <h1 className="text-6xl font-extrabold text-gray-800 mb-8 px-12 text-left">
         Top Projects
       </h1>
+      <hr className="border-t-2 border-gray-300 mb-2" />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {projectsData.map((project, index) => (
@@ -100,6 +113,22 @@ const Projects = () => {
             description={project.description}
           />
         ))}
+      </div>
+
+      <div className="mt-8 px-12">
+        <hr className="border-t-2 border-gray-300 mb-2" />
+        <div className="flex justify-end items-center">
+          <p className="text-lg text-gray-600 font-medium mr-4">More of Us</p>
+          <button
+            className="bg-gray-800 text-white px-4 py-2 rounded-full flex items-center hover:bg-gray-700 transition-colors"
+            onClick={() => {
+              // Add your navigation or action logic here
+              console.log("More button clicked");
+            }}
+          >
+            More <ChevronRight className="ml-2 w-4 h-4" />
+          </button>
+        </div>
       </div>
     </div>
   );
