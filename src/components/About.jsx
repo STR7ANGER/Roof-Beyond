@@ -16,10 +16,10 @@ const About = () => {
           <div>
             <div>
               <h2 className="text-2xl font-semibold text-gray-900 sm:text-3xl mb-4">
-                Roof & Beyond: Your Trusted Roofing Experts
+                Roof & Beyond: Your Trusted Experts
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                At Roof & Beyond, we bring decades of expertise to every roofing project. Our dedicated team combines skilled craftsmanship with cutting-edge technology to deliver superior roofing solutions tailored to your unique needs.
+                At Roof & Beyond, we bring decades of expertise to every project. Our dedicated team combines skilled with cutting-edge technology to deliver superior place tailored to your unique needs and vision.
               </p>
             </div>
             <div className="mt-8">
