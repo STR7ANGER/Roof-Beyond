@@ -84,7 +84,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div id="projects" className="container mx-auto px-4 py-8">
       <h1 className="text-6xl font-extrabold text-gray-800 mb-8 px-12 text-left">
         Top Projects
       </h1>
