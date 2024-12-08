@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import { Star, ChevronRight } from "lucide-react";
 
 const ProjectCard = ({ image1, image2, title, price, description }) => {
@@ -38,6 +39,8 @@ const ProjectCard = ({ image1, image2, title, price, description }) => {
 };
 
 const Projects = () => {
+  const navigate = useNavigate(); // Add this line to use navigation
+
   const projectsData = [
     {
       image1:
@@ -121,10 +124,7 @@ const Projects = () => {
           <p className="text-lg text-gray-600 font-medium mr-4">More of Us</p>
           <button
             className="bg-gray-800 text-white px-4 py-2 rounded-full flex items-center hover:bg-gray-700 transition-colors"
-            onClick={() => {
-              // Add your navigation or action logic here
-              console.log("More button clicked");
-            }}
+            onClick={() => navigate('/Pro')} // Updated to use navigate
           >
             More <ChevronRight className="ml-2 w-4 h-4" />
           </button>

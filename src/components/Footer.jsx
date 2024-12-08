@@ -6,7 +6,6 @@ import {
   Phone,
   Mail,
   Github,
-  Twitter,
 } from "lucide-react";
 import { assets } from "../assets/assets";
 
@@ -66,16 +65,44 @@ const Footer = () => {
             © 2024 Roof & Beyond. All Rights Reserved.
           </p>
           <div className="flex space-x-4">
-            <a href="#" className="text-gray-400 hover:text-white">
+            <a 
+              href="https://www.linkedin.com/in/aditya-maurya-31457b281" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-400 hover:text-white"
+            >
               <Linkedin size={20} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white">
+            <a 
+              href="https://www.instagram.com/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-400 hover:text-white"
+            >
               <Instagram size={20} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <Twitter size={20} />
+            <a 
+              href="https://x.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-400 hover:text-white"
+            >
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="20" 
+                height="20" 
+                viewBox="0 0 24 24" 
+                fill="currentColor"
+              >
+                <path d="M18.901 1.153h3.68l-8.04 9.557L24 22.846h-7.406L10.888 14.71 3.733 22.846H0l8.61-9.82L0 1.153h7.594l5.742 7.608 6.565-7.608Zm-1.306 17.545h2.034L5.537 3.24H3.374l14.221 15.458Z"/>
+              </svg>
             </a>
-            <a href="#" className="text-gray-400 hover:text-white">
+            <a 
+              href="https://github.com/STR7ANGER/Roof-Beyond.git" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-400 hover:text-white"
+            >
               <Github size={20} />
             </a>
           </div>

@@ -19,6 +19,7 @@ export default function AwesomeNavbar() {
   const navItems = [
     { label: 'About', href: '#about' },
     { label: 'Projects', href: '#projects' },
+    { label: 'Seller', href: '#Seller' },
     { label: 'Testimonials', href: '#testimonials' },
     { label: 'Contact', href:"#Contact"}
   ];
