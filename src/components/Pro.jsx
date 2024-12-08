@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Star, Filter, X } from "lucide-react";
+import Navbar from "./NavBar";
+import Footer from "./Footer";
 
 const ProProjectCard = ({
   image1,
@@ -580,7 +582,6 @@ const Pro = () => {
       rating: 4,
     },
   ];
-
   const [filters, setFilters] = useState({
     type: [],
     exactRating: null,
@@ -648,151 +649,161 @@ const Pro = () => {
   };
 
   return (
-    <div className="flex">
-      {/* Filter Sidebar */}
-      <div className="w-64 p-6 bg-gray-50 border-r">
-        <div className="flex items-center mb-6">
-          <Filter className="mr-2" />
-          <h2 className="text-xl font-bold">Filters</h2>
-        </div>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
 
-        {/* Property Type Filter */}
-        <div className="mb-6">
-          <div className="flex justify-between items-center mb-3">
-            <h3 className="font-semibold">Property Type</h3>
-            {filters.type.length > 0 && (
-              <button
-                onClick={clearPropertyTypeFilter}
-                className="text-red-500 hover:text-red-700 flex items-center text-sm"
-              >
-                <X className="w-4 h-4 mr-1" /> Clear
-              </button>
-            )}
+      <div className="flex flex-grow mt-[9vh]">
+        {" "}
+        {/* Add margin-top to account for navbar height */}
+        {/* Filter Sidebar */}
+        <div className="w-64 p-6 bg-gray-50 border-r">
+          <div className="flex items-center mb-6">
+            <Filter className="mr-2" />
+            <h2 className="text-xl font-bold">Filters</h2>
           </div>
-          {propertyTypes.map((type) => (
-            <div key={type} className="flex items-center mb-2">
-              <input
-                type="checkbox"
-                id={type}
-                checked={filters.type.includes(type)}
-                onChange={() => handleTypeFilter(type)}
-                className="mr-2"
-              />
-              <label htmlFor={type}>{type}</label>
+
+          {/* Property Type Filter */}
+          <div className="mb-6">
+            <div className="flex justify-between items-center mb-3">
+              <h3 className="font-semibold">Property Type</h3>
+              {filters.type.length > 0 && (
+                <button
+                  onClick={clearPropertyTypeFilter}
+                  className="text-red-500 hover:text-red-700 flex items-center text-sm"
+                >
+                  <X className="w-4 h-4 mr-1" /> Clear
+                </button>
+              )}
             </div>
-          ))}
-        </div>
-
-        {/* Rating Filter */}
-        <div className="mb-6">
-          <div className="flex justify-between items-center mb-3">
-            <h3 className="font-semibold">Rating</h3>
-            {filters.exactRating !== null && (
-              <button
-                onClick={clearRatingFilter}
-                className="text-red-500 hover:text-red-700 flex items-center text-sm"
-              >
-                <X className="w-4 h-4 mr-1" /> Clear
-              </button>
-            )}
+            {propertyTypes.map((type) => (
+              <div key={type} className="flex items-center mb-2">
+                <input
+                  type="checkbox"
+                  id={type}
+                  checked={filters.type.includes(type)}
+                  onChange={() => handleTypeFilter(type)}
+                  className="mr-2"
+                />
+                <label htmlFor={type}>{type}</label>
+              </div>
+            ))}
           </div>
-          {[5, 4, 3, 2, 1].map((rating) => (
-            <div key={rating} className="flex items-center mb-2">
-              <input
-                type="radio"
-                id={`rating-${rating}`}
-                name="rating"
-                checked={filters.exactRating === rating}
-                onChange={() => handleRatingFilter(rating)}
-                className="mr-2"
-              />
-              <label htmlFor={`rating-${rating}`} className="flex items-center">
-                {[...Array(5)].map((_, index) => (
-                  <Star
-                    key={index}
-                    className={`w-4 h-4 ${
-                      index < rating
-                        ? "text-yellow-500 fill-current"
-                        : "text-gray-300 fill-current"
-                    }`}
-                  />
-                ))}
-                <span className="ml-2 text-sm">{rating} stars</span>
-              </label>
+
+          {/* Rating Filter */}
+          <div className="mb-6">
+            <div className="flex justify-between items-center mb-3">
+              <h3 className="font-semibold">Rating</h3>
+              {filters.exactRating !== null && (
+                <button
+                  onClick={clearRatingFilter}
+                  className="text-red-500 hover:text-red-700 flex items-center text-sm"
+                >
+                  <X className="w-4 h-4 mr-1" /> Clear
+                </button>
+              )}
             </div>
-          ))}
-        </div>
-
-        {/* Price Filter */}
-        <div>
-          <div className="flex justify-between items-center mb-3">
-            <h3 className="font-semibold">Price Range</h3>
-            {(filters.minPrice !== 0 || filters.maxPrice !== Infinity) && (
-              <button
-                onClick={clearPriceFilter}
-                className="text-red-500 hover:text-red-700 flex items-center text-sm"
-              >
-                <X className="w-4 h-4 mr-1" /> Clear
-              </button>
-            )}
+            {[5, 4, 3, 2, 1].map((rating) => (
+              <div key={rating} className="flex items-center mb-2">
+                <input
+                  type="radio"
+                  id={`rating-${rating}`}
+                  name="rating"
+                  checked={filters.exactRating === rating}
+                  onChange={() => handleRatingFilter(rating)}
+                  className="mr-2"
+                />
+                <label
+                  htmlFor={`rating-${rating}`}
+                  className="flex items-center"
+                >
+                  {[...Array(5)].map((_, index) => (
+                    <Star
+                      key={index}
+                      className={`w-4 h-4 ${
+                        index < rating
+                          ? "text-yellow-500 fill-current"
+                          : "text-gray-300 fill-current"
+                      }`}
+                    />
+                  ))}
+                  <span className="ml-2 text-sm">{rating} stars</span>
+                </label>
+              </div>
+            ))}
           </div>
-          <div className="flex flex-col space-y-2">
-            <button
-              onClick={() => handlePriceFilter(0, 500000)}
-              className={`text-left hover:bg-gray-200 p-2 rounded ${
-                getPriceRangeLabel() === "Under $500K" ? "bg-blue-100" : ""
-              }`}
-            >
-              Under $500K
-            </button>
-            <button
-              onClick={() => handlePriceFilter(500000, 1000000)}
-              className={`text-left hover:bg-gray-200 p-2 rounded ${
-                getPriceRangeLabel() === "$500K - $1M" ? "bg-blue-100" : ""
-              }`}
-            >
-              $500K - $1M
-            </button>
-            <button
-              onClick={() => handlePriceFilter(1000000, 3000000)}
-              className={`text-left hover:bg-gray-200 p-2 rounded ${
-                getPriceRangeLabel() === "$1M - $3M" ? "bg-blue-100" : ""
-              }`}
-            >
-              $1M - $3M
-            </button>
-            <button
-              onClick={() => handlePriceFilter(3000000, Infinity)}
-              className={`text-left hover:bg-gray-200 p-2 rounded ${
-                getPriceRangeLabel() === "Above $3M" ? "bg-blue-100" : ""
-              }`}
-            >
-              Above $3M
-            </button>
+
+          {/* Price Filter */}
+          <div>
+            <div className="flex justify-between items-center mb-3">
+              <h3 className="font-semibold">Price Range</h3>
+              {(filters.minPrice !== 0 || filters.maxPrice !== Infinity) && (
+                <button
+                  onClick={clearPriceFilter}
+                  className="text-red-500 hover:text-red-700 flex items-center text-sm"
+                >
+                  <X className="w-4 h-4 mr-1" /> Clear
+                </button>
+              )}
+            </div>
+            <div className="flex flex-col space-y-2">
+              <button
+                onClick={() => handlePriceFilter(0, 500000)}
+                className={`text-left hover:bg-gray-200 p-2 rounded ${
+                  getPriceRangeLabel() === "Under $500K" ? "bg-blue-100" : ""
+                }`}
+              >
+                Under $500K
+              </button>
+              <button
+                onClick={() => handlePriceFilter(500000, 1000000)}
+                className={`text-left hover:bg-gray-200 p-2 rounded ${
+                  getPriceRangeLabel() === "$500K - $1M" ? "bg-blue-100" : ""
+                }`}
+              >
+                $500K - $1M
+              </button>
+              <button
+                onClick={() => handlePriceFilter(1000000, 3000000)}
+                className={`text-left hover:bg-gray-200 p-2 rounded ${
+                  getPriceRangeLabel() === "$1M - $3M" ? "bg-blue-100" : ""
+                }`}
+              >
+                $1M - $3M
+              </button>
+              <button
+                onClick={() => handlePriceFilter(3000000, Infinity)}
+                className={`text-left hover:bg-gray-200 p-2 rounded ${
+                  getPriceRangeLabel() === "Above $3M" ? "bg-blue-100" : ""
+                }`}
+              >
+                Above $3M
+              </button>
+            </div>
+          </div>
+        </div>
+        {/* Projects Grid */}
+        <div className="flex-grow p-8">
+          <h1 className="text-4xl font-bold mb-6">
+            Professional Real Estate Collection
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {filteredProjects.map((project, index) => (
+              <ProProjectCard
+                key={index}
+                image1={project.image1}
+                image2={project.image2}
+                title={project.title}
+                price={project.price}
+                description={project.description}
+                type={project.type}
+                rating={project.rating}
+              />
+            ))}
           </div>
         </div>
       </div>
 
-      {/* Projects Grid */}
-      <div className="flex-grow p-8">
-        <h1 className="text-4xl font-bold mb-6">
-          Professional Real Estate Collection
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {filteredProjects.map((project, index) => (
-            <ProProjectCard
-              key={index}
-              image1={project.image1}
-              image2={project.image2}
-              title={project.title}
-              price={project.price}
-              description={project.description}
-              type={project.type}
-              rating={project.rating}
-            />
-          ))}
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 };

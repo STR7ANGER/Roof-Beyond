@@ -12,15 +12,18 @@ const App = () => {
     <Router>
       <div>
         <Routes>
-          <Route path="/" element={
-            <>
-              <Header />
-              <About />
-              <Projects />
-              <Testimonials />
-              <Footer />
-            </>
-          } />
+          <Route
+            path="/"
+            element={
+              <>             
+                <Header />
+                <About />
+                <Projects />
+                <Testimonials />
+                <Footer />
+              </>
+            }
+          />
           <Route path="/pro" element={<Pro />} />
         </Routes>
       </div>
