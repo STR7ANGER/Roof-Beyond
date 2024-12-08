@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Star } from 'lucide-react'; // Add Star import
+import { X, Star } from 'lucide-react';
 
 const ProjectDetailsModal = ({ project, onClose }) => {
   return (
@@ -50,6 +50,32 @@ const ProjectDetailsModal = ({ project, onClose }) => {
                 />
               ))}
               <span className="ml-2 text-sm text-gray-600">({project.rating})</span>
+            </div>
+
+            {/* Divider */}
+            <div className="border-t my-6"></div>
+
+            {/* Payment Section */}
+            <div className="mb-4">
+              <h3 className="text-lg font-semibold mb-2">Payment Options</h3>
+              {project.status === 'sold' ? (
+                <div className="text-center">
+                  <span className="text-red-500 font-bold underline text-xl">SOLD</span>
+                </div>
+              ) : (
+                <div className="flex space-x-4">
+                  <button 
+                    className="flex-1 border border-red-500 text-red-500 py-3 rounded-lg hover:bg-red-50 transition"
+                  >
+                    10% Down Payment
+                  </button>
+                  <button 
+                    className="flex-1 bg-red-500 text-white font-bold py-3 rounded-lg hover:bg-red-600 transition"
+                  >
+                    Pay {project.price}
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>
