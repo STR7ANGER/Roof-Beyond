@@ -7,6 +7,8 @@ import Projects from "./components/Projects.jsx";
 import Footer from "./components/Footer.jsx";
 import Pro from "./components/Pro";
 import Abt from "./components/Abt.jsx";
+import SignUp from "./components/sign_up.jsx";
+import Login from "./components/login.jsx";
 
 const App = () => {
   return (
@@ -27,6 +29,8 @@ const App = () => {
           />
           <Route path="/pro" element={<Pro />} />
           <Route path="/abt" element={<Abt />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </Router>

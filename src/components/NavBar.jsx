@@ -24,23 +24,29 @@ function Navbar() {
       href: "#", 
       onClick: () => navigate("/") 
     },
-    { label: "About", href: "#about",onClick:()=>navigate("/Abt") },
+    { 
+      label: "About", 
+      href: "#about",
+      onClick: () => navigate("/Abt") 
+    },
     {
       label: "Projects",
       href: "#projects",
       onClick: () => navigate("/Pro"),
     },
-    { label: "Seller", href: "#Seller" },
+    { 
+      label: "Seller", 
+      href: "#Seller",
+      onClick: () => navigate("/Seller")  // Added navigation
+    },
     { 
       label: "Testimonials", 
       href: "#testimonials",
       onClick: () => {
-       
         if (window.location.pathname !== '/') {
           navigate('/');
         }
         
-       
         setTimeout(() => {
           const testimonialSection = document.querySelector('#testimonials');
           if (testimonialSection) {
@@ -49,7 +55,11 @@ function Navbar() {
         }, 100);
       }
     },
-    { label: "Contact", href: "#Contact" },
+    { 
+      label: "Contact", 
+      href: "#Contact",
+      onClick: () => navigate("/Contact")  // Added navigation
+    },
   ];
 
   useEffect(() => {
@@ -152,6 +162,7 @@ function Navbar() {
         {/* Call to Action */}
         <NavbarContent justify="end" className="hidden lg:flex">
           <motion.button
+            onClick={() => navigate("/signup")}
             initial={{ x: 20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             whileHover={{
@@ -218,6 +229,7 @@ function Navbar() {
                   </motion.a>
                 ))}
                 <motion.button
+                  onClick={() => navigate("/signup")}
                   whileTap={{ scale: 0.95 }}
                   className="bg-gradient-to-r from-indigo-600 to-purple-600 
                     text-white px-8 py-3 rounded-full mt-4
