@@ -86,9 +86,9 @@ const Pro = () => {
   const projectsData = [
     {
       image1:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
+        "https://robbreport.com/wp-content/uploads/2024/03/8899BeverlyHouses_LA_FI.jpg?w=1000",
       image2:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
+        "https://onekindesign.com/wp-content/uploads/2016/02/Modern-House-Interiors-DTM-Interiors-05-1-Kindesign.jpg",
       title: "Modern Urban House | Los Angeles",
       price: "$1,200,000",
       description:
@@ -98,9 +98,9 @@ const Pro = () => {
     },
     {
       image1:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
+        "https://photos.zillowstatic.com/fp/610db2088cf2d2627ee9b6a3b4304bc6-cc_ft_960.jpg",
       image2:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
+        "https://media.admiddleeast.com/photos/65700bd6b4ef4bbf1f0dc541/master/w_1600%2Cc_limit/22160%2520PCH__0015.jpg",
       title: "Coastal Bungalow | Malibu",
       price: "$850,000",
       description: "Charming seaside bungalow with panoramic ocean views.",
@@ -109,9 +109,9 @@ const Pro = () => {
     },
     {
       image1:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
+        "https://www.simsbuilders.com/hs-fs/hubfs/Sims%20-%20Classic%20Mediterranean%201.png?width=1920&name=Sims%20-%20Classic%20Mediterranean%201.png",
       image2:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
+        "https://go.simsbuilders.com/hubfs/Likhari%2016.jpg",
       title: "Luxury Mediterranean Villa | Santorini",
       price: "$5,600,000",
       description:
@@ -121,9 +121,9 @@ const Pro = () => {
     },
     {
       image1:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
+        "https://onekindesign.com/wp-content/uploads/2018/11/Modern-Farmhouse-Style-Holder-Design-Associates-01-1-Kindesign.jpg",
       image2:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
+        "https://i.pinimg.com/736x/b7/12/76/b71276ab6f0ade46a14be2abe67e2233.jpg",
       title: "Rustic Countryside Estate | Napa Valley",
       price: "$1,750,000",
       description: "Tranquil country home with acres of private land.",
@@ -132,9 +132,9 @@ const Pro = () => {
     },
     {
       image1:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
+        "https://s.wsj.net/public/resources/images/BN-GH796_0108PU_J_20150107112307.jpg",
       image2:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
+        "https://thumbs.cityrealty.com/assets/smart/1004x/webp/6/66/661b98bf13f571501bbaa74653d423be434191d9",
       title: "Downtown Penthouse | New York",
       price: "$3,250,000",
       description: "Luxury penthouse with 360-degree city skyline views.",
@@ -143,9 +143,9 @@ const Pro = () => {
     },
     {
       image1:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
+        "https://www.idesignarch.com/wp-content/uploads/Custom-Loft-Apartment-Dogpatch-San-Francisco_1.jpg",
       image2:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
+        "https://hombali.com/wp-content/uploads/2021/02/Berawa_loft1_bl-104-758x564.jpg",
       title: "Smart Urban Apartment | San Francisco",
       price: "$650,000",
       description:
@@ -155,9 +155,9 @@ const Pro = () => {
     },
     {
       image1:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
+        "https://www.decorpot.com/images/1378919131small-space-big-style-compact-apartment-interior-design-tips.jpg",
       image2:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
+        "https://media.licdn.com/dms/image/C5112AQFwL1DgWjQC1w/article-cover_image-shrink_600_2000/0/1580734034638?e=2147483647&v=beta&t=-DlgIlhoDBfC5JePwcqPyYwar0jkuk6rtJD_FoJGdbY",
       title: "Compact City Flat | London",
       price: "$450,000",
       description: "Efficient living space in prime urban location.",
@@ -248,20 +248,20 @@ const Pro = () => {
     },
     {
       image1:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
+        "https://amazingarchitecture.com/storage/files/1742/architecture-projects/beton-ivory/modern-black-and-white-loft-apartment/modern-black-and-white-loft-apartment-beton-ivory-9.jpg",
       image2:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
+        "https://sharedeasy.club/wp-content/uploads/blog/condo-loft-and-apartment.jpg",
       title: "Urban Loft Apartment | Paris",
       price: "$950,000",
       description: "Stylish and open-plan apartment in the heart of the city.",
-      type: "Apartment",
+      type: "Loft",
       rating: 3,
     },
     {
       image1:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
+        "https://photos.spotahome.com/fsobscale_1600_900_nonverified_ur_15_50/90a4aa8deefe00ac6dbd54ffeabbcceeb9bb346f671ebc8d3d166056.webp",
       image2:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
+        "https://photos.spotahome.com/fsobscale_1600_900_nonverified_ur_15_50/8a7caab58751c27c682cbb36213fb36e432d1afd4306c41a0796f7d2.webp",
       title: "Chic Studio Flat | Berlin",
       price: "$300,000",
       description:
@@ -286,7 +286,7 @@ const Pro = () => {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
       image2:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
-      title: "Grand Country Estate | Virginia",
+      title: "Grand Country | Virginia",
       price: "$12,000,000",
       description:
         "An expansive estate with a grand mansion and extensive grounds.",
@@ -330,9 +330,9 @@ const Pro = () => {
     },
     {
       image1:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
+        "https://images.trvl-media.com/lodging/69000000/68630000/68627600/68627540/530adfc6.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill",
       image2:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
+        "https://st.hzcdn.com/simgs/d5c154d40f7df676_4-0539/rustic-living-room.jpg",
       title: "Lakefront Cabin | Montana",
       price: "$450,000",
       description: "Cozy cabin by the lake with stunning water views.",
@@ -363,9 +363,9 @@ const Pro = () => {
     },
     {
       image1:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
+        "https://i.pinimg.com/1200x/33/e6/d8/33e6d8b687e77ae6696d42b7cdb448e6.jpg",
       image2:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
+        "https://img.freepik.com/premium-photo/thatch-nest-cottage-ambiance_98908-5367.jpg",
       title: "Charming Countryside Cottage | Ireland",
       price: "$350,000",
       description: "Idyllic cottage surrounded by lush green fields.",
@@ -457,7 +457,7 @@ const Pro = () => {
       title: "Urban Loft | Berlin",
       price: "$650,000",
       description: "Stylish loft in the heart of a vibrant city.",
-      type: "Apartment",
+      type: "Loft",
       rating: 3,
     },
     {
@@ -561,9 +561,9 @@ const Pro = () => {
     },
     {
       image1:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
+        "https://img-v2.gtsstatic.net/reno/imagereader.aspx?imageurl=https%3A%2F%2Fsir.azureedge.net%2F977i215%2F65qjmzghnjw9462xjq4vd00084i215&option=N&h=472&permitphotoenlargement=false",
       image2:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
+        "https://www.habituallychic.luxury/wp-content/uploads/2019/09/chateau-daunoy-france-tmagazine-habituallychic-009.jpeg",
       title: "Luxury Countryside Estate | France",
       price: "$4,500,000",
       description: "Expansive estate with vineyards and classic architecture.",
@@ -654,7 +654,7 @@ const Pro = () => {
 
       <div className="flex flex-grow mt-[9vh]">
         {/* Filter Sidebar - Dark Theme */}
-        <div className="w-64 p-6 bg-gray-800 border-r border-gray-700 text-gray-200">
+        <div className="w-64 p-6 bg-gray-900 border-r border-gray-700 text-gray-200">
           <div className="flex items-center mb-6">
             <Filter className="mr-2 text-gray-300" />
             <h2 className="text-xl font-bold text-gray-100">Filters</h2>
