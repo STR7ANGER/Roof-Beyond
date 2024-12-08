@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Star, Filter, X } from "lucide-react";
 import Navbar from "./NavBar";
 import Footer from "./Footer";
-import projectsData from './projectsData.json'; 
+import ProjectDetailsModal from "./ProjectDetailsModal";
+import projectsData from "./projectsData.json";
 
 const ProProjectCard = ({
   image1,
@@ -12,6 +13,7 @@ const ProProjectCard = ({
   description,
   type,
   rating,
+  onTitleClick,
 }) => {
   const renderStars = (rating) => {
     const fullStars = Math.floor(rating);
@@ -67,7 +69,10 @@ const ProProjectCard = ({
       </div>
       <div className="p-4 flex flex-col flex-grow">
         <div className="flex justify-between items-center mb-2">
-          <h3 className="text-sm text-gray-700 group-hover:underline group-hover:underline-offset-4 font-semibold">
+          <h3
+            onClick={onTitleClick}
+            className="text-sm text-gray-700 group-hover:underline group-hover:underline-offset-4 font-semibold cursor-pointer"
+          >
             {title}
           </h3>
           <span className="text-sm font-bold text-gray-900">{price}</span>
@@ -85,6 +90,7 @@ const ProProjectCard = ({
 
 const Pro = () => {
   const [projectData, setProjectData] = useState([]);
+  const [selectedProject, setSelectedProject] = useState(null);
   const [filters, setFilters] = useState({
     type: [],
     exactRating: null,
@@ -160,6 +166,13 @@ const Pro = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
+      {/* Modal Rendering */}
+      {selectedProject && (
+        <ProjectDetailsModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
 
       <div className="flex flex-grow mt-[9vh]">
         {/* Filter Sidebar - Dark Theme */}
@@ -299,13 +312,8 @@ const Pro = () => {
             {filteredProjects.map((project, index) => (
               <ProProjectCard
                 key={index}
-                image1={project.image1}
-                image2={project.image2}
-                title={project.title}
-                price={project.price}
-                description={project.description}
-                type={project.type}
-                rating={project.rating}
+                {...project} // Spread all project properties
+                onTitleClick={() => setSelectedProject(project)} // Add this line
               />
             ))}
           </div>

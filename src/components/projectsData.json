@@ -255,29 +255,11 @@
     {
       "image1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
       "image2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
-      "title": "Sunny Beachfront Bungalow | Hawaii",
-      "price": "$1,050,000",
-      "description": "Relaxing beachfront property with direct beach access.",
-      "type": "Bungalow",
-      "rating": 5
-    },
-    {
-      "image1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
-      "image2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
       "title": "Historic City House | Rome",
       "price": "$900,000",
       "description": "Classic house with historic charm and modern upgrades.",
       "type": "House",
       "rating": 4
-    },
-    {
-      "image1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
-      "image2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
-      "title": "Eco-Friendly Home | Portland",
-      "price": "$700,000",
-      "description": "Sustainable home with solar panels and modern features.",
-      "type": "House",
-      "rating": 5
     },
     {
       "image1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
@@ -296,15 +278,6 @@
       "description": "Stylish loft in the heart of a vibrant city.",
       "type": "Loft",
       "rating": 3
-    },
-    {
-      "image1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
-      "image2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
-      "title": "Compact City Flat | London",
-      "price": "$350,000",
-      "description": "Minimalist flat for efficient city living.",
-      "type": "Flat",
-      "rating": 2
     },
     {
       "image1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
@@ -332,51 +305,6 @@
       "description": "Rustic charm with modern comfort in the countryside.",
       "type": "Cottage",
       "rating": 1
-    },
-    {
-      "image1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
-      "image2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
-      "title": "Contemporary Seaside Villa | Greece",
-      "price": "$3,700,000",
-      "description": "Modern villa overlooking the azure Mediterranean Sea.",
-      "type": "Villa",
-      "rating": 5
-    },
-    {
-      "image1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
-      "image2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
-      "title": "Downtown Loft | New York",
-      "price": "$1,500,000",
-      "description": "Spacious loft with industrial decor and skyline views.",
-      "type": "Loft",
-      "rating": 4
-    },
-    {
-      "image1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
-      "image2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
-      "title": "Secluded Forest Cabin | Canada",
-      "price": "$420,000",
-      "description": "Peaceful cabin surrounded by dense forest greenery.",
-      "type": "Cabin",
-      "rating": 3
-    },
-    {
-      "image1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
-      "image2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
-      "title": "Modern Waterfront Apartment | Miami",
-      "price": "$1,800,000",
-      "description": "Luxury apartment with breathtaking water views.",
-      "type": "Apartment",
-      "rating": 5
-    },
-    {
-      "image1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFcNU6MeNKC6D4CMfhOPpNIPmDUc_iuFeFg&s",
-      "image2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCq15NgupyEYTXYsFHmwzw8ese-ppMO1GZ-A&s",
-      "title": "Minimalist Studio Flat | Seoul",
-      "price": "$400,000",
-      "description": "Compact living space with clean, modern design.",
-      "type": "Flat",
-      "rating": 3
     },
     {
       "image1": "https://img-v2.gtsstatic.net/reno/imagereader.aspx?imageurl=https%3A%2F%2Fsir.azureedge.net%2F977i215%2F65qjmzghnjw9462xjq4vd00084i215&option=N&h=472&permitphotoenlargement=false",
