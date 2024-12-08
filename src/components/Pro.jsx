@@ -653,23 +653,21 @@ const Pro = () => {
       <Navbar />
 
       <div className="flex flex-grow mt-[9vh]">
-        {" "}
-        {/* Add margin-top to account for navbar height */}
-        {/* Filter Sidebar */}
-        <div className="w-64 p-6 bg-gray-50 border-r">
+        {/* Filter Sidebar - Dark Theme */}
+        <div className="w-64 p-6 bg-gray-800 border-r border-gray-700 text-gray-200">
           <div className="flex items-center mb-6">
-            <Filter className="mr-2" />
-            <h2 className="text-xl font-bold">Filters</h2>
+            <Filter className="mr-2 text-gray-300" />
+            <h2 className="text-xl font-bold text-gray-100">Filters</h2>
           </div>
 
           {/* Property Type Filter */}
           <div className="mb-6">
             <div className="flex justify-between items-center mb-3">
-              <h3 className="font-semibold">Property Type</h3>
+              <h3 className="font-semibold text-gray-200">Property Type</h3>
               {filters.type.length > 0 && (
                 <button
                   onClick={clearPropertyTypeFilter}
-                  className="text-red-500 hover:text-red-700 flex items-center text-sm"
+                  className="text-red-400 hover:text-red-500 flex items-center text-sm"
                 >
                   <X className="w-4 h-4 mr-1" /> Clear
                 </button>
@@ -682,9 +680,11 @@ const Pro = () => {
                   id={type}
                   checked={filters.type.includes(type)}
                   onChange={() => handleTypeFilter(type)}
-                  className="mr-2"
+                  className="mr-2 bg-gray-700 border-gray-600 text-blue-500 focus:ring-blue-500"
                 />
-                <label htmlFor={type}>{type}</label>
+                <label htmlFor={type} className="text-gray-300">
+                  {type}
+                </label>
               </div>
             ))}
           </div>
@@ -692,11 +692,11 @@ const Pro = () => {
           {/* Rating Filter */}
           <div className="mb-6">
             <div className="flex justify-between items-center mb-3">
-              <h3 className="font-semibold">Rating</h3>
+              <h3 className="font-semibold text-gray-200">Rating</h3>
               {filters.exactRating !== null && (
                 <button
                   onClick={clearRatingFilter}
-                  className="text-red-500 hover:text-red-700 flex items-center text-sm"
+                  className="text-red-400 hover:text-red-500 flex items-center text-sm"
                 >
                   <X className="w-4 h-4 mr-1" /> Clear
                 </button>
@@ -710,19 +710,19 @@ const Pro = () => {
                   name="rating"
                   checked={filters.exactRating === rating}
                   onChange={() => handleRatingFilter(rating)}
-                  className="mr-2"
+                  className="mr-2 bg-gray-700 border-gray-600 text-blue-500 focus:ring-blue-500"
                 />
                 <label
                   htmlFor={`rating-${rating}`}
-                  className="flex items-center"
+                  className="flex items-center text-gray-300"
                 >
                   {[...Array(5)].map((_, index) => (
                     <Star
                       key={index}
                       className={`w-4 h-4 ${
                         index < rating
-                          ? "text-yellow-500 fill-current"
-                          : "text-gray-300 fill-current"
+                          ? "text-yellow-400 fill-current"
+                          : "text-gray-600 fill-current"
                       }`}
                     />
                   ))}
@@ -735,11 +735,11 @@ const Pro = () => {
           {/* Price Filter */}
           <div>
             <div className="flex justify-between items-center mb-3">
-              <h3 className="font-semibold">Price Range</h3>
+              <h3 className="font-semibold text-gray-200">Price Range</h3>
               {(filters.minPrice !== 0 || filters.maxPrice !== Infinity) && (
                 <button
                   onClick={clearPriceFilter}
-                  className="text-red-500 hover:text-red-700 flex items-center text-sm"
+                  className="text-red-400 hover:text-red-500 flex items-center text-sm"
                 >
                   <X className="w-4 h-4 mr-1" /> Clear
                 </button>
@@ -748,32 +748,32 @@ const Pro = () => {
             <div className="flex flex-col space-y-2">
               <button
                 onClick={() => handlePriceFilter(0, 500000)}
-                className={`text-left hover:bg-gray-200 p-2 rounded ${
-                  getPriceRangeLabel() === "Under $500K" ? "bg-blue-100" : ""
+                className={`text-left hover:bg-gray-700 p-2 rounded text-gray-300 ${
+                  getPriceRangeLabel() === "Under $500K" ? "bg-blue-900" : ""
                 }`}
               >
                 Under $500K
               </button>
               <button
                 onClick={() => handlePriceFilter(500000, 1000000)}
-                className={`text-left hover:bg-gray-200 p-2 rounded ${
-                  getPriceRangeLabel() === "$500K - $1M" ? "bg-blue-100" : ""
+                className={`text-left hover:bg-gray-700 p-2 rounded text-gray-300 ${
+                  getPriceRangeLabel() === "$500K - $1M" ? "bg-blue-900" : ""
                 }`}
               >
                 $500K - $1M
               </button>
               <button
                 onClick={() => handlePriceFilter(1000000, 3000000)}
-                className={`text-left hover:bg-gray-200 p-2 rounded ${
-                  getPriceRangeLabel() === "$1M - $3M" ? "bg-blue-100" : ""
+                className={`text-left hover:bg-gray-700 p-2 rounded text-gray-300 ${
+                  getPriceRangeLabel() === "$1M - $3M" ? "bg-blue-900" : ""
                 }`}
               >
                 $1M - $3M
               </button>
               <button
                 onClick={() => handlePriceFilter(3000000, Infinity)}
-                className={`text-left hover:bg-gray-200 p-2 rounded ${
-                  getPriceRangeLabel() === "Above $3M" ? "bg-blue-100" : ""
+                className={`text-left hover:bg-gray-700 p-2 rounded text-gray-300 ${
+                  getPriceRangeLabel() === "Above $3M" ? "bg-blue-900" : ""
                 }`}
               >
                 Above $3M
@@ -781,7 +781,7 @@ const Pro = () => {
             </div>
           </div>
         </div>
-        {/* Projects Grid */}
+        {/* Projects Grid - Unchanged Light Theme */}
         <div className="flex-grow p-8">
           <h1 className="text-4xl font-bold mb-6">
             Professional Real Estate Collection

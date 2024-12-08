@@ -1,0 +1,124 @@
+.abt-container {
+    background: linear-gradient(45deg, #1e1e2f, #5a189a, #e63946);
+    color: #ffffff;
+    text-align: center;
+    padding: 4rem 2rem; /* More padding at the top to ensure space from the Navbar */
+    min-height: calc(100vh - 120px); /* Ensure content section fits between Navbar and Footer */
+    animation: gradient-shift 10s infinite;
+  }
+  
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .abt-title {
+    margin-top: 3rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: #ffbe0b;
+    animation: title-glow 2s infinite alternate;
+  }
+  
+  @keyframes title-glow {
+    from { text-shadow: 0 0 10px #ffbe0b; }
+    to { text-shadow: 0 0 20px #ffbe0b, 0 0 30px #ffd700; }
+  }
+  
+  .abt-description {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .abt-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .abt-item {
+    padding: 1.5rem;
+    font-size: 1.25rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .neon-border {
+    border: 3px solid #7209b7;
+    animation: neon-glow 1.5s infinite alternate;
+  }
+  
+  @keyframes neon-glow {
+    from { box-shadow: 0 0 10px #7209b7; }
+    to { box-shadow: 0 0 20px #b5179e, 0 0 30px #f72585; }
+  }
+  
+  .abt-crazy-section {
+    margin: 2rem 0;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+  
+  .abt-subtitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #4cc9f0;
+  }
+  
+  .abt-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .abt-list li {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .abt-disco {
+    font-size: 1.5rem;
+    padding: 1rem;
+    background: radial-gradient(circle, #ff0a54, #ff477e, #ff7096);
+    color: white;
+    margin-top: 2rem;
+    animation: disco-lights 5s infinite linear;
+  }
+  
+  @keyframes disco-lights {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .abt-title {
+      font-size: 2.5rem;
+    }
+  
+    .abt-description {
+      font-size: 1.3rem;
+    }
+  
+    .abt-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  
+    .abt-item {
+      padding: 1.2rem;
+      font-size: 1.15rem;
+    }
+  
+    .abt-crazy-section {
+      padding: 1rem;
+    }
+  
+    .abt-subtitle {
+      font-size: 1.8rem;
+    }
+  }
+  

@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Hide default scrollbar for webkit browsers (Chrome, Safari, newer versions of Edge) */
+body::-webkit-scrollbar {
+  width: 8px; /* Thin vertical line */
+  background-color: transparent;
+}
+
+/* Scrollbar track */
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Scrollbar handle */
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3); /* Dark, semi-transparent line */
+  border-radius: 4px; /* Rounded edges */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}

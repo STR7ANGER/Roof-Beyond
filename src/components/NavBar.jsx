@@ -19,15 +19,36 @@ function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const navItems = [
-    { label: "Home", href: "#" },
-    { label: "About", href: "#about" },
+    { 
+      label: "Home", 
+      href: "#", 
+      onClick: () => navigate("/") 
+    },
+    { label: "About", href: "#about",onClick:()=>navigate("/Abt") },
     {
       label: "Projects",
       href: "#projects",
       onClick: () => navigate("/Pro"),
     },
     { label: "Seller", href: "#Seller" },
-    { label: "Testimonials", href: "#testimonials" },
+    { 
+      label: "Testimonials", 
+      href: "#testimonials",
+      onClick: () => {
+       
+        if (window.location.pathname !== '/') {
+          navigate('/');
+        }
+        
+       
+        setTimeout(() => {
+          const testimonialSection = document.querySelector('#testimonials');
+          if (testimonialSection) {
+            testimonialSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    },
     { label: "Contact", href: "#Contact" },
   ];
 

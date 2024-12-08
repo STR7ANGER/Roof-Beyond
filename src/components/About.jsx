@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import { assets } from "../assets/assets.js";
 
 const About = () => {
+  const navigate = useNavigate();
   return (
     <section id="about" className="bg-white">
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
@@ -58,7 +60,10 @@ const About = () => {
               </div>
               <div className="mt-6">
                 <hr className="border-t-2 border-gray-400 mb-4" />
-                <button className="bg-blue-600 hover:bg-blue-700 text-white text-lg font-bold py-3 px-6 rounded-lg">
+                <button
+                  onClick={() => navigate("/Abt")}
+                  className="bg-blue-600 hover:bg-blue-700 text-white text-lg font-bold py-3 px-6 rounded-lg"
+                >
                   Learn more
                 </button>
               </div>
