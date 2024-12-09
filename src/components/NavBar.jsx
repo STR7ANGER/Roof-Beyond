@@ -58,7 +58,12 @@ function Navbar() {
     { 
       label: "Contact", 
       href: "#Contact",
-      onClick: () => navigate("/Contact")  // Added navigation
+      onClick: () => {
+        const element = document.querySelector("#Contact");
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "end" });
+        }
+      }
     },
   ];
 
