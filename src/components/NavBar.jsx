@@ -37,7 +37,7 @@ function Navbar() {
     { 
       label: "Seller", 
       href: "#Seller",
-      onClick: () => navigate("/Seller")  // Added navigation
+      onClick: () => navigate("/seller")  
     },
     { 
       label: "Testimonials", 

@@ -10,6 +10,7 @@ import Pro from "./components/Pro";
 import Abt from "./components/Abt.jsx";
 import SignUp from "./components/sign_up.jsx";
 import Login from "./components/login.jsx";
+import Seller from "./components/seller.jsx";
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/abt" element={<Abt />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/seller" element={<Seller />} />
         </Routes>
       </div>
     </Router>
