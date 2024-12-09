@@ -160,7 +160,7 @@ const Abt = () => {
                   Our Journey of Excellence
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Founded with a passion for transforming roofing from a
+                  Founded with a passion for transforming house from a
                   necessity to an art form, Roof & Beyond has been pioneering
                   innovative solutions that blend cutting-edge technology with
                   unparalleled craftsmanship. Our commitment goes beyond mere
@@ -169,10 +169,10 @@ const Abt = () => {
                 </p>
                 <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
                   <blockquote className="italic text-gray-600">
-                    "Every roof is a canvas, every project a masterpiece of
-                    protection and design."
+                    "Every house is a dream, every project a masterpiece of
+                    vision and design."
                     <span className="block text-right mt-2 text-gray-800">
-                      — Sarah Thompson, Founder
+                      — Aditya, Founder
                     </span>
                   </blockquote>
                 </div>

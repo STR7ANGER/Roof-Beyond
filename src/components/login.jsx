@@ -4,12 +4,14 @@ import { useNavigate } from "react-router-dom";
 import { assets } from '../assets/assets.js';
 
 const Login = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+  
   const [formData, setFormData] = useState({
     email: '',
     password: '',
     role: 'buyer'
   });
+  const [showPopup, setShowPopup] = useState(false); // State to control popup visibility
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,8 +23,18 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your login logic here
-    console.log("Login Data:", formData);
+    // Example of checking if credentials are valid (replace with actual validation logic)
+    if (formData.email === '' || formData.password === '') {
+      alert('Please fill in both fields');
+      return;
+    }
+
+    // Show popup when login credentials are incorrect
+    setShowPopup(true);
+  };
+
+  const handlePopupClose = () => {
+    navigate('/signup'); // Close the popup when the user clicks "OK"
   };
 
   return (
@@ -70,8 +82,6 @@ const Login = () => {
             whileFocus={{ scale: 1.02 }}
             className="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          
-          
           
           <motion.button
             type="submit"
@@ -125,6 +135,24 @@ const Login = () => {
           </p>
         </div>
       </motion.div>
+
+      {/* Popup Modal */}
+      {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-96">
+            <h3 className="text-xl font-semibold">Oops!</h3>
+            <p className="text-gray-600 mt-2">Sign Up kar phele.</p>
+            <div className="flex justify-end mt-4">
+              <button 
+                onClick={handlePopupClose} 
+                className="bg-blue-600 text-white py-2 px-4 rounded-lg"
+              >
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

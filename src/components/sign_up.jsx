@@ -14,6 +14,8 @@ const SignUp = () => {
     role: 'buyer'
   });
 
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -30,6 +32,12 @@ const SignUp = () => {
     }
     // Add your sign-up logic here
     console.log("Sign Up Data:", formData);
+    setIsPopupOpen(true); // Show popup after form submission
+  };
+
+  const handlePopupClose = () => {
+    setIsPopupOpen(false); // Close the popup
+    navigate("/"); // Navigate to login page [abhi home pe klar rhaa hu]
   };
 
   return (
@@ -162,13 +170,33 @@ const SignUp = () => {
             <a 
               onClick={ () => navigate("/Login")}
               className="text-blue-600 hover:text-blue-700 transition-colors"
-              
             >
               Log In
             </a>
           </p>
         </div>
       </motion.div>
+
+      {/* Popup Modal */}
+      {isPopupOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3 }}
+            className="bg-white rounded-lg shadow-lg p-8 w-96 text-center"
+          >
+            <h1 className="text-2xl font-semibold text-gray-800">LoL!</h1>
+            <h3 className="mt-4 text-gray-600">Backend toh hai he nahi chal Frontend se kaam chala</h3>
+            <button 
+              onClick={handlePopupClose} 
+              className="mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg"
+            >
+              OK
+            </button>
+          </motion.div>
+        </div>
+      )}
     </div>
   );
 };
