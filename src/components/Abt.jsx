@@ -127,12 +127,12 @@ const Abt = () => {
       linkedin: "https://www.linkedin.com/in/navalbihani15/",
     },
     {
-      name: "Arjav",
+      name: "Perry",
       role: "Head of Project Design",
       description:
         "Award-winning architect specializing in residential and commercial design",
-      image: "/arj.jpg",
-      linkedin: "https://www.linkedin.com/in/arjavjain014/",
+      image: "/perry.png",
+      linkedin: "https://en.wikipedia.org/wiki/Perry_the_Platypus",
     },
   ];
 
