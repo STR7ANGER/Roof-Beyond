@@ -1,31 +1,31 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { assets } from '../assets/assets.js';
+import { assets } from "../assets/assets.js";
 
 const Login = () => {
   const navigate = useNavigate();
-  
+
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-    role: 'buyer'
+    email: "",
+    password: "",
+    role: "buyer",
   });
   const [showPopup, setShowPopup] = useState(false); // State to control popup visibility
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Example of checking if credentials are valid (replace with actual validation logic)
-    if (formData.email === '' || formData.password === '') {
-      alert('Please fill in both fields');
+    if (formData.email === "" || formData.password === "") {
+      alert("Please fill in both fields");
       return;
     }
 
@@ -34,21 +34,21 @@ const Login = () => {
   };
 
   const handlePopupClose = () => {
-    navigate('/signup'); // Close the popup when the user clicks "OK"
+    navigate("/signup"); // Close the popup when the user clicks "OK"
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-100 via-white to-gray-100 flex items-center justify-center px-4 py-12">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
         className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 border border-gray-200"
       >
         <div className="flex flex-col items-center mb-8">
-          <motion.img 
-            src={assets.logo} 
-            alt="Roof & Beyond Logo" 
+          <motion.img
+            src={assets.logo}
+            alt="Roof & Beyond Logo"
             className="h-24 w-24 rounded-full mb-4"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -59,10 +59,10 @@ const Login = () => {
           </h2>
           <p className="text-gray-600 mt-2">Login to Your Account</p>
         </div>
-        
+
         <form onSubmit={handleSubmit} className="space-y-4">
-          <motion.input 
-            type="email" 
+          <motion.input
+            type="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
@@ -71,9 +71,9 @@ const Login = () => {
             whileFocus={{ scale: 1.02 }}
             className="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          
-          <motion.input 
-            type="password" 
+
+          <motion.input
+            type="password"
             name="password"
             value={formData.password}
             onChange={handleChange}
@@ -82,7 +82,7 @@ const Login = () => {
             whileFocus={{ scale: 1.02 }}
             className="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          
+
           <motion.button
             type="submit"
             whileHover={{ scale: 1.05 }}
@@ -95,43 +95,43 @@ const Login = () => {
             group relative overflow-hidden"
           >
             <span>Log In</span>
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              strokeWidth={1.5} 
-              stroke="currentColor" 
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
               className="w-5 h-5 absolute right-[-30px] top-1/2 transform -translate-y-1/2 
                 transition-all duration-300 
                 group-hover:translate-x-[-35px] 
                 opacity-0 group-hover:opacity-100"
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" 
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
               />
             </svg>
           </motion.button>
         </form>
-        
+
         <div className="mt-6 text-center">
           <p className="text-gray-600">
-            Don't have an account? {' '}
-            <a 
-              href="/signup" 
-              className="text-blue-600 hover:text-blue-700 transition-colors"
+            Don't have an account?{" "}
+            <span
+              onClick={() => navigate("/signup")}
+              className="text-blue-600 hover:text-blue-700 transition-colors cursor-pointer"
             >
               Sign Up
-            </a>
+            </span>
           </p>
           <p className="text-gray-500 mt-2 text-sm">
-            <a 
-              href="/forgot-password" 
-              className="text-blue-500 hover:text-blue-600 transition-colors"
+            <span
+              onClick={() => navigate("/")}
+              className="text-blue-500 hover:text-blue-600 transition-colors cursor-pointer"
             >
               Forgot Password?
-            </a>
+            </span>
           </p>
         </div>
       </motion.div>
@@ -143,8 +143,8 @@ const Login = () => {
             <h3 className="text-xl font-semibold">Oops!</h3>
             <p className="text-gray-600 mt-2">Sign Up kar phele.</p>
             <div className="flex justify-end mt-4">
-              <button 
-                onClick={handlePopupClose} 
+              <button
+                onClick={handlePopupClose}
                 className="bg-blue-600 text-white py-2 px-4 rounded-lg"
               >
                 OK
